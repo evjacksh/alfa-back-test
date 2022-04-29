@@ -1,0 +1,224 @@
+.App{
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 3em 0 0;
+    display: flex;
+    
+}
+
+.app_content_side {
+    width: 80%;
+    height: auto;
+    box-sizing: border-box;
+    padding: 3% 0;
+}
+
+.content_side_card{
+    width: 70%;
+    height: 65vh;
+    background-color: rgb(238, 238, 238);
+    position: relative;
+    border-radius: 5px;
+    box-shadow: 6px 6px 3.5px 0 rgb(175, 175, 175);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: .5em 0 1em;
+    margin: 0 auto 3.5em;
+}
+
+
+.card_image{
+    width: 90%;
+    height: 85%;
+    background-size: 100% auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card_image_inner{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.15);
+}
+
+.side_card_btn, .card_delete_btn{
+    cursor: pointer;
+    position: absolute;
+    bottom: .15em;
+    right: .25em;
+    font-size: 35px;
+    color: rgb(105, 105, 105);
+}
+
+.side_card_btn:active, .card_delete_btn:active{
+    color: rgb(88, 88, 88);
+}
+
+.content_side_card .liked{
+    color: red;
+}
+
+.content_side_card .liked:active{
+    color: rgb(214, 0, 0);
+}
+
+.card_delete_btn{
+    bottom: .2em;
+    right: 1.5em;
+    font-size: 33px;
+
+}
+
+.app_more_btn{
+    display: flex;
+    width: 10em;
+    height: 2.5em;
+    background-color: rgb(26, 26, 26);
+    color: white;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    user-select: none;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.app_more_btn:active{
+    background-color: black;
+}
+
+.app_content_side .hide{
+    display: none;
+}
+
+.app_filters_side{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.filters_side_button{
+    background-color: rgb(160, 160, 160);
+    color: white;
+    padding: .5em 1em;
+    width: 5.5em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+    user-select: none;
+    position: fixed;
+}
+
+.filters_side_button:active{
+    background-color: rgb(134, 134, 134);
+}
+
+
+.filters_side_icon{
+    width: 10px;
+    height: 2px;
+    background-color: white;
+    position: relative;
+    top: 1px;
+}
+
+.filters_side_icon:after ,.filters_side_icon:before{
+    width: 10px;
+    height: 2px;
+    background-color: white;
+    display: block;
+    content: "";
+    position: absolute;
+    bottom: 4px;
+}
+
+.filters_side_icon:before{
+    content: "";
+    position: absolute;
+    top: 4px;
+}
+
+.filters_side_content{
+    width: 14em;
+    height: 3em;
+    background-color: rgb(202, 202, 202);
+    box-sizing: border-box;
+    padding: 1em 1em;
+    list-style: none;
+    border-radius: 10px;
+    color: white;
+    display: none;
+    cursor: pointer;
+    user-select: none;
+    position: fixed;
+    top: 8%;
+}
+
+.active:active{
+    background-color: rgb(165, 165, 165);
+}
+
+.app_filters_side .active{
+    display: block;
+    animation: appearAnim .7s ease;
+}
+
+.app_filters_side .liked{
+    background-color: rgb(221 65 65);
+}
+
+.app_filters_side .liked:active{
+    background-color: rgb(192, 46, 46);
+}
+
+.filters_side_content li {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+@keyframes appearAnim{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.noLikedContent{
+    font-size: 28px;
+    font-weight: 900;
+    text-align: center;
+}
+
+.image_modal{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,.3);
+    z-index: 3;
+}
+
+.modal{
+    overflow: hidden;
+}
